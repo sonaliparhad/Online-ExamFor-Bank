@@ -1,5 +1,6 @@
 package com.webElement;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
@@ -12,6 +13,7 @@ public class MethodsOfWebElement {
 		WebDriverManager.chromedriver().setup();
 		ChromeDriver driver = new ChromeDriver();
 		driver.get("https://testingshastra.com/");
+		driver.findElement(By.xpath("//a[@href=\"/assignments\"]")).click();
 	}
 
 }
